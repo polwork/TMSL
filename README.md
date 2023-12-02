@@ -1,4 +1,4 @@
-# TMSL
+# TMSL：Transferable Multiple Subspace Learning for Hyperspectral Image Super-Resolution
 
 Run runTMSL.m is the main function for the super-resolution.
 
