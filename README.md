@@ -3,12 +3,11 @@
 Run runTMSL.m is the main function for the super-resolution.
 
 After using this code, please cite our paper as follows:
-
+@article{bu2023transferable,
   title={Transferable Multiple Subspace Learning for Hyperspectral Image Super-Resolution},
-  author={Yuanyang Bu, Yongqiang Zhao, Jize Xue, Jiaxin Yao and Jonathan Cheung-Wai Chan},
+  author={Bu, Yuanyang and Zhao, Yongqiang and Xue, Jize and Yao, Jiaxin and Chan, Jonathan Cheung-Wai},
   journal={IEEE Geoscience and Remote Sensing Letters},
-  volume={},
-  number={},
-  pages={},
-  year={},
+  year={2023},
   publisher={IEEE}
+}
+
