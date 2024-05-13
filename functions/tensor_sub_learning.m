@@ -1,5 +1,4 @@
 function [Wi,index] = tensor_sub_learning(Y3d, par)
-% Y3d: �����ͼ�񣬱�����ά��ʽ
 
 uGrpPatchs = Im2Patch3D(Y3d,par);                   
 YClusters = ReshapeTo2D_C(uGrpPatchs);
@@ -29,5 +28,8 @@ for i = 1:n
     Groups{i} = uGrpPatchs(:,:,index{i});
 end
 parfor i = 1:n
-[Wi{i},~,~,~ ] = Tensor_LRR(permute(Groups{i},[2,1,3]),permute(Groups{i},[2,1,3]),800,1,par.lambda);
+% [Wi{i},~,~,~ ] =
+% Tensor_LRR(permute(Groups{i},[2,1,3]),permute(Groups{i},[2,1,3]),800,1,par.lambda);%%can handle noisy cases,but long time
+Wi{i} = Tensor_LRR_closed(permute(Groups{i},[2,1,3]),0.00001);%cannot handle noisy cases,but highly efficient
 end
+
